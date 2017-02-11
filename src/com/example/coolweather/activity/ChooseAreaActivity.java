@@ -4,6 +4,8 @@ package com.example.coolweather.activity;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.w3c.dom.Text;
+
 import com.example.coolweather.R;
 import com.example.coolweather.db.CoolWeatherDB;
 import com.example.coolweather.model.City;
@@ -28,6 +30,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 public class ChooseAreaActivity extends Activity{
+	Text ttt;
 	Button b1;
 	private ProgressDialog progressDialog;
 	ListView lv;
@@ -40,6 +43,7 @@ public class ChooseAreaActivity extends Activity{
 	final int LOAD=2;
 	final int NOLOAD=1;
 	private int LEVEL=0;
+
 	private static final String adress="http://v.juhe.cn/weather/citys?key=6ec85ced632f37411a1ec72fee95b6f3";
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -196,6 +200,7 @@ public class ChooseAreaActivity extends Activity{
 				    coolWeatherDB.saveCity1(cityList);
 				    cityList=coolWeatherDB.querycity(dataList.get(arg2));
 				    querycitys();
+				   // ss=response;
 				
 	
 			}
